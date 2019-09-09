@@ -9,3 +9,7 @@ def about
 end
 
 end
+
+def new
+
+end

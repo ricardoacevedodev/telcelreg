@@ -1,33 +1,70 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>Registro Mensual</title>
+    <style>
+#generalt {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
-<h1>Tarifas</h1>
+#generalt td, #generalt th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
 
-<table>
-  <thead>
-    <tr>
-      <th>Usuario</th>
-      <th>Plan</th>
-      <th>Tarifa</th>
-      <th>Descripcion</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+#generalt tr:nth-child(even){background-color: #f2f2f2;}
 
-  <tbody>
-    <% @tarifas.each do |tarifa| %>
-      <tr>
-        <td><%= tarifa.usuario %></td>
-        <td><%= tarifa.plan %></td>
-        <td><%= tarifa.tarifa %></td>
-        <td><%= tarifa.descripcion %></td>
-        <td><%= link_to 'Mostrar', tarifa %></td>
-        <td><%= link_to 'Edit', edit_tarifa_path(tarifa) %></td>
-        <td><%= link_to 'Destroy', tarifa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+#generalt tr:hover {background-color: #ddd;}
 
-<br>
+#generalt th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+  </head>
+  <body>
+    <p id="notice"><%= notice %></p>
 
-<%= link_to 'New Tarifa', new_tarifa_path %>
+    <h1>Tarifas</h1>
+
+    <table id="generalt">
+      <thead>
+        <tr>
+          <th>Usuario</th>
+          <th>Plan</th>
+          <th>Tarifa</th>
+          <th>Descripcion</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @tarifas.each do |tarifa| %>
+          <tr>
+            <td><%= tarifa.usuario %></td>
+            <td><%= tarifa.plan %></td>
+            <td><%= tarifa.tarifa %></td>
+            <td><%= tarifa.descripcion %></td>
+            <td><%= link_to 'Mostrar', tarifa %></td>
+            <td><%= link_to 'Editar', edit_tarifa_path(tarifa) %></td>
+            <td><%= link_to 'Borrar', tarifa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'Nuevo Registro', new_tarifa_path %>
+
+
+  </body>
+  <footer>v.05 KMRG</footer>
+</html>

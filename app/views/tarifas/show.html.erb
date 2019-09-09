@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @tarifa.usuario %>
+</p>
+
+<p>
+  <strong>Plan:</strong>
+  <%= @tarifa.plan %>
+</p>
+
+<p>
+  <strong>Tarifa:</strong>
+  <%= @tarifa.tarifa %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @tarifa.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_tarifa_path(@tarifa) %> |
+<%= link_to 'Back', tarifas_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  usuario: MyString
+  plan: MyString
+  tarifa: MyString
+  descripcion: MyString
+
+two:
+  usuario: MyString
+  plan: MyString
+  tarifa: MyString
+  descripcion: MyString

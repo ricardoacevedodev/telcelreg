@@ -1,0 +1,37 @@
+<%= form_with(model: tarifa, local: true) do |form| %>
+  <% if tarifa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tarifa.errors.count, "error") %> prohibited this tarifa from being saved:</h2>
+
+      <ul>
+      <% tarifa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :usuario %>
+    <%= form.text_field :usuario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :plan %>
+    <%= form.text_field :plan %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tarifa %>
+    <%= form.text_field :tarifa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

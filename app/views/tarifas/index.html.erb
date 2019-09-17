@@ -2,12 +2,36 @@
 <html lang="en" dir="ltr">
   <head>
     <title>Registro Mensual</title>
-  
+
   </head>
   <body>
     <p id="notice"><%= notice %></p>
 
     <h1>Tarifas</h1>
+    <style>
+#generalt {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#generalt td, #generalt th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#generalt tr:nth-child(even){background-color: #f2f2f2;}
+
+#generalt tr:hover {background-color: #ddd;}
+
+#generalt th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
 
     <table id="generalt">
       <thead>

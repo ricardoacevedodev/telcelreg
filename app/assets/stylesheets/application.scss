@@ -14,3 +14,20 @@
  */
  // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
+$navbar-default-bg: #ff0000;
+
+
+
+#logo{
+  float: left;
+  font-size: 1.7em;
+  color: #193180;
+  text-transform: uppercase;;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover{
+  color: #fff;
+  text-decoration: none;
+}

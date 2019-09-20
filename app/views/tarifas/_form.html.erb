@@ -10,28 +10,51 @@
       </ul>
     </div>
   <% end %>
+    <div class='row'>
+      <div class='col-xs-60'>
 
-  <div class="field">
-    <%= form.label :usuario %>
-    <%= form.text_field :usuario %>
-  </div>
+        <div class="field">
+        <div class="form-group">
+          <div class="control-label col-sm-60">
+        <%= form.label :usuario %>
+        <div class="col-sm-60">
+        <%= form.text_field :usuario, class:"form-control", placeholder: "Nombre de usuario", autofocus: true %>
+      </div>
+     </div>
 
-  <div class="field">
-    <%= form.label :plan %>
-    <%= form.text_field :plan %>
-  </div>
+      <div class="field">
+        <div class="form-group">
+          <div class="control-label col-sm-60">
+        <%= form.label :plan %>
+        <div class="col-sm-60">
+        <%= form.text_field :plan, class: "form-control", placeholder: "Nombre de plan telcel" %>
+        </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :tarifa %>
-    <%= form.text_field :tarifa %>
-  </div>
+      <div class="field">
+        <div class="form-group">
+          <div class="control-label col-sm-60">
+        <%= form.label :tarifa %>
+        <div class="col-sm-60">
+        <%= form.text_field :tarifa, class: "form-control", placeholder:"ingresa la tarifa del mes" %>
+      </div>
+      </div>
+      </div>
 
-  <div class="field">
-    <%= form.label :descripcion %>
-    <%= form.text_field :descripcion %>
-  </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+      <div class="field">
+        <div class="form-group">
+          <div class="control-label col-sm-60">
+        <%= form.label :descripcion %>
+        <div class="col-sm-60">
+        <%= form.text_field :descripcion, class:"form-control", placeholder:"Ingresa serv. excedidos" %>
+      </div>
+      </div>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    <% end %>
+    </div>
+</div>
